@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+     <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<h1 align="center">Bulls and cows game</h1>
+<a href="history/">History</a>
+<form action="/" method="post">
+    {% csrf_token %}
+        <h2>Guess 4 numbers. Enter them separated with spaces:</h2>
+        <input type="text" name="numbers"/>
+        <input type="submit" value="Send"/>
+</form>
+<div>{{ result }}</div>
+</body>
+</html>

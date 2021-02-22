@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+     <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<div>
+    <h1>History game</h1>
+    <h3>
+         {% for k, v in result.items%}
+          <div>{{k}}. {{v}}</div>
+         {% endfor %}
+     </h3>
+</div>
+</body>
+</html>
